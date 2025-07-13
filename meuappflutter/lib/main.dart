@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Meu Flutter App Demo Home Page'),
     );
   }
 }
@@ -104,10 +104,14 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('You have pushed the button this many times:'),
+            const Text('Você pressionou o botão tantas vezes:'),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: TextStyle(
+                fontSize: 48, // aumenta o tamanho do texto
+                color: Colors.red, // muda a cor do texto
+                fontWeight: FontWeight.bold, // opcional: deixa em negrito
+              ),
             ),
           ],
         ),
@@ -115,6 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
+        backgroundColor: Colors.green, // muda a cor do botão
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
